@@ -1,6 +1,6 @@
 # OpenAI settings
 # OPENAI_API_KEY = "<your-api-key>"
-OPENAI_MODEL = "gpt-4"
+OPENAI_MODEL = "gpt-4o"
 OPENAI_TEMPERATURE = 0
 
 # Agent settings
