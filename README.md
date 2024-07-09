@@ -2,7 +2,7 @@
 
 ## 🌟 Overview
 
-This script implements a [ReAct](https://react-lm.github.io/) (Reasoning and Acting) agent using the [OpenAI API](https://openai.com/api/), and without the use of any conversational AI frameworks. The agent can engage in a conversation loop, perform actions based on its reasoning, and incorporate observations from these actions into its decision-making process.
+This project implements a [ReAct](https://react-lm.github.io/) (Reasoning and Acting) agent using the [OpenAI API](https://openai.com/api/), and without the use of any conversational AI frameworks. The agent can engage in a conversation loop, perform actions based on its reasoning, and incorporate observations from these actions into its decision-making process.
 
 ![ReAct Agent](assets/react-image.png)
 *[Image credit](https://react-lm.github.io/)*
@@ -71,7 +71,7 @@ If no question is provided, the script will use a default query, defined in the 
 The `config` file contains various settings that control the behavior of the agent and the query engine. Below are the key configurations:
 
 - **OpenAI settings**:
-  - `OPENAI_MODEL`: The model used for generating responses (default: "gpt-4").
+  - `OPENAI_MODEL`: The model used for generating responses (default: `gpt-4o`).
   - `OPENAI_TEMPERATURE`: The temperature setting for the model, which controls the randomness of the output (default: 0).
 
 - **Agent settings**:
