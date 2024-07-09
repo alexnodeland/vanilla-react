@@ -91,7 +91,7 @@ Observation: 3.1622776601683795
 Answer: The square root of the number of countries that border France is approximately 3.16.
 ```
 
-If no question is provided, the script will use a default query, defined in `config.py`.
+If no question is provided, the script will use a default query, defined in [`config.py`](config.py).
 
 ## 🧩 Configuration
 
@@ -125,20 +125,20 @@ The `config` file contains various settings that control the behavior of the age
 
 To add new actions:
 
-1. Define a new function that performs the desired action in `tools.py`
-2. Register the function in the `main` function using:
+1. Define a new function that performs the desired action in [`tools.py`](tools.py)
+2. Register the function in the [`main`](main.py) function using:
 
     ```python
     action_registry.register("action_name", action_function)
     ```
 
-3. Update the `action_prompt` in `config.py` to include the new action.
+3. Update the `action_prompt` in [`config.py`](config.py) to include the new action.
 
 ## ⚠️ Limitations
 
 - Wikipedia searches are limited to the first result's snippet
 - Tools can only accept a single string as input
-- The `main` function doesn't handle follow up questions or context, though this is supported by the framework.
+- The [`main`](main.py) function doesn't handle follow up questions or context, though this is supported by the framework.
 
 ## 📄 License
 
