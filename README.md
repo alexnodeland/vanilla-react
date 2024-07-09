@@ -64,6 +64,33 @@ For example:
 python main.py "What is the square root of the number of countries that border France?"
 ```
 
+Would yield the following output:
+
+```txt
+Thought: To find the square root of the number of countries that border France, I first need to determine how many countries share a border with France. I should look this up on Wikipedia.
+
+Action: wikipedia: France
+
+PAUSE
+ -- running wikipedia France
+Observation: <span class="searchmatch">France</span>, officially the <span class="searchmatch">French</span> Republic, is a country located primarily in Western Europe. It also includes overseas regions and territories in the Americas
+Thought: The initial summary did not provide information about the number of countries that border France. I need to look up the specific information about France's borders.
+
+Action: wikipedia: Borders of France
+
+PAUSE
+ -- running wikipedia Borders of France
+Observation: <span class="searchmatch">French</span> Republic has terrestrial <span class="searchmatch">borders</span> with 10 sovereign states, 8 <span class="searchmatch">bordering</span> Metropolitan <span class="searchmatch">France</span> and 2 <span class="searchmatch">bordering</span> the Overseas Departments <span class="searchmatch">of</span> <span class="searchmatch">France</span>,
+Thought: France has a total of 10 countries that share its borders. I now need to calculate the square root of 10.
+
+Action: calculate: 10 ** 0.5
+
+PAUSE
+ -- running calculate 10 ** 0.5
+Observation: 3.1622776601683795
+Answer: The square root of the number of countries that border France is approximately 3.16.
+```
+
 If no question is provided, the script will use a default query, defined in `config.py`.
 
 ## 🧩 Configuration
