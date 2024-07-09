@@ -132,7 +132,7 @@ To add new actions:
     action_registry.register("action_name", action_function)
     ```
 
-3. Update the `action_prompt` in [`config.py`](config.py) to include the new action.
+3. Update the `action_instructions` in [`config.py`](config.py) to include the new action.
 
 ## ⚠️ Limitations
 
