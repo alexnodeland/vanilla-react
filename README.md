@@ -1,4 +1,4 @@
-# 🤖 ReAct Agent Implementation
+# 🍦🤖 Vanilla ReAct
 
 ## 🌟 Overview
 
