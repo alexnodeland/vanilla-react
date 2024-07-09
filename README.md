@@ -31,9 +31,9 @@ This project implements a [ReAct](https://react-lm.github.io/) (Reasoning and Ac
 ## 📋 Requirements
 
 - 🐍 Python 3.7+
-- 🔑 OpenAI API key
-- `httpx` library for HTTP requests
-- `openai` library for API interactions
+- 🔑 [OpenAI API key](https://platform.openai.com/api-keys)
+- [`httpx`](https://pypi.org/project/httpx/) library for HTTP requests
+- [`openai`](https://pypi.org/project/openai/) library for API interactions
 
 ## 🛠 Installation
 
@@ -64,7 +64,7 @@ For example:
 python main.py "What is the square root of the number of countries that border France?"
 ```
 
-If no question is provided, the script will use a default query, defined in the `config` file.
+If no question is provided, the script will use a default query, defined in `config.py`.
 
 ## 🧩 Configuration
 
@@ -84,7 +84,7 @@ The `config` file contains various settings that control the behavior of the age
   - `ACTION_REGEX`: A regular expression pattern to identify actions in the agent's responses.
 
 - **Default question**:
-  - `DEFAULT_QUESTION`: The default question to be used if no question is provided by the user (default: "What is category theory?").
+  - `DEFAULT_QUESTION`: The default question to be used if no question is provided by the user.
 
 
 ## 🧰 Components
@@ -98,18 +98,17 @@ The `config` file contains various settings that control the behavior of the age
 
 To add new actions:
 
-1. Define a new function that performs the desired action
+1. Define a new function that performs the desired action in `tools.py`
 2. Register the function in the `main` function using:
 
     ```python
     action_registry.register("action_name", action_function)
     ```
 
-3. Update the `action_prompt` in `config` to include the new action.
+3. Update the `action_prompt` in `config.py` to include the new action.
 
 ## ⚠️ Limitations
 
-- Currently uses a fixed model ("gpt-4o") and temperature (0).
 - Wikipedia searches are limited to the first result's snippet
 - Tools can only accept a single string as input
 - The `main` function doesn't handle follow up questions or context, though this is supported by the framework.
